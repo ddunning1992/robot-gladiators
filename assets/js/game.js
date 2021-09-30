@@ -162,8 +162,20 @@ var randomNumber = function(max, min) {
   return value;
 }
 
+//function to set name
+var getPlayerName = function() {
+  var name = "";
+
+  while (name === "" || name === null) {
+    name = prompt("What is your robot's name?");
+  }
+
+  console.log("Your robot's name is " + name);
+
+};
+
 var playerInfo = {
-  name: window.prompt("what is your robot's name?"),
+  name: getPlayerName(),
   health: 100,
   attack: 10,
   money: 10,
